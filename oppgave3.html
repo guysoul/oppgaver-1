@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crazy cat lady - oppgave 3</title>
+  </head>
+  <body>
+    <input type="button" id="click_btn" value="Vis katt" />
+    <p id="total_cats">Antall katter: 0</p>
+    <div id="cat_container"></div>
+
+    <script>
+      const clickBtn = document.getElementById("click_btn");
+      const totalCats = document.getElementById("total_cats");
+      const catContainer = document.getElementById("cat_container");
+      let catCounter = 0;
+
+      clickBtn.onclick = showCat;
+
+      function showCat() {
+        catCounter++;
+
+        totalCats.innerHTML = `Antall katter: ${catCounter}`;
+        catContainer.innerHTML += `<img src="img/cat.jpg" style="width: 200px" />`;
+      }
+    </script>
+  </body>
+</html>

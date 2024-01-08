@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Film history - oppgave 2</title>
+  </head>
+  <body>
+    Film Title<input type="text" id="film_title" value="" /><br />
+    Year<input type="text" id="yr_out" value="" /><br />
+    <button onclick="gatherInfo()">Ferdig!</button><br /><br /><br />
+    <p id="display_result"></p>
+
+    <script>
+      function gatherInfo() {
+        const filmTitle = document.getElementById("film_title").value;
+        const yrOut = document.getElementById("yr_out").value;
+
+        showFilm(filmTitle, yrOut);
+      }
+
+      function showFilm(film, year) {
+        document.getElementById(
+          "display_result"
+        ).innerHTML = `Filmen ${film} kom ut i år ${year}`;
+      }
+    </script>
+  </body>
+</html>

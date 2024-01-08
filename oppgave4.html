@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5 bilder array - oppgave 4</title>
+  </head>
+  <body>
+    <p id="total_pictures"></p>
+    <div id="display_picture"></div>
+
+    <script>
+      const imgArray = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
+      const displayPicture = document.getElementById("display_picture");
+      const totalPictures = document.getElementById("total_pictures");
+
+      for (let i = 0; i < imgArray.length; i++) {
+        displayPicture.innerHTML += `<img src="img/${imgArray[i]}" style="width: 200px" />`;
+
+        totalPictures.innerHTML = `Det finnes ${i + 1} bilder i arrayet`;
+      }
+    </script>
+  </body>
+</html>

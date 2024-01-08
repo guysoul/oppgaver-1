@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Number - oppgave 1</title>
+  </head>
+  <body>
+    <input type="button" id="click_btn" value="Trykk her!" />
+    <p id="random_num" style="font-weight: bold; font-size: 25px">0</p>
+
+    <script>
+      const clickBtn = document.getElementById("click_btn");
+      let randomNum = document.getElementById("random_num");
+
+      clickBtn.onclick = getRandomNum;
+
+      function getRandomNum() {
+        randomNum.innerHTML = Math.floor(Math.random() * 70) + 1;
+      }
+    </script>
+  </body>
+</html>
